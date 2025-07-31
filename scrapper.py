@@ -9,6 +9,3 @@ async def basic_crawl(url: str) -> str:
             if result.success:
                 return result.markdown.raw_markdown
     return "❌ No successful result found." 
-
-def run_crawler_sync(url: str) -> str:
-    return asyncio.run(basic_crawl(url))
